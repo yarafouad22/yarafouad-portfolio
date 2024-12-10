@@ -1,0 +1,207 @@
+
+$primary-color: #2980b9; 
+$secondary-color: #34495e; 
+$hover-color: #1a2a3d; 
+$text-color-light: #ecf0f1; 
+$text-color-dark: #2c3e50; 
+$shadow: 0 8px 15px rgba(0, 0, 0, 0.3); 
+$light-bg: #f4f4f4; 
+$dark-bg: #121212; 
+$button-bg: #3498db; 
+$button-hover-bg: #2980b9; 
+$button-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+$button-size: 0.9rem;
+$button-padding: 12px;
+$button-border-radius: 50%;
+$button-position: 20px;
+
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: $light-bg;
+  color: $text-color-dark;
+
+  &.light {
+    background-color: $light-bg;
+    color: $text-color-dark;
+
+    nav {
+      background-color: #e0e0e0; 
+    }
+
+   
+  }
+
+  &.dark {
+    background-color: $dark-bg;
+    color: $text-color-dark;
+
+    nav {
+      background-color: #313131; 
+    }
+
+
+  }
+}
+.contact{
+  margin: 20px; 
+}
+
+
+.name  {
+  color: $primary-color;
+  text-align: start;
+  margin-top: 50px;
+}
+
+h4 {
+  text-align: start;
+  width: 50%;
+  margin: 20px;
+}
+
+.navbar {
+  background-color: $secondary-color;
+}
+
+footer {
+  background-color: #333;
+}
+
+.what-i-do {
+  .section-title {
+    font-size: 2rem;
+    font-weight: bold;
+    color: $primary-color;
+  }
+
+  .card {
+    border: none;
+    border-radius: 8px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+    &:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    }
+
+    .service-icon {
+      font-size: 3rem;
+      color: $primary-color;
+    }
+
+    .card-title {
+      font-size: 1.2rem;
+      font-weight: bold;
+    }
+
+    .card-text {
+      font-size: 0.95rem;
+      color: $text-color-dark;
+    }
+  }
+}
+
+.skills {
+  background: linear-gradient(135deg, #e0e0e0, #f4f4f4);
+  padding: 60px 0;
+
+  .section-title {
+    font-size: 2.5rem;
+    color: $primary-color;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 50px;
+  }
+
+  .skill-card {
+    width: 155px;
+    height: 160px;
+    margin: 0 auto;
+    border-radius: 30%;
+    background: $primary-color;
+    color: $text-color-light;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: $shadow;
+    transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s;
+    animation: float 3s ease-in-out infinite;
+
+    &:hover {
+      transform: scale(1.1);
+      background: $hover-color;
+      box-shadow: 0 12px 20px rgba(0, 0, 0, 0.3);
+    }
+
+    .skill-icon {
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .skill-name {
+      font-size: 1.2rem;
+      font-weight: bold;
+      text-transform: capitalize;
+      margin: 0;
+    }
+
+    .skill-level {
+      font-size: 1rem;
+      opacity: 0.8;
+      margin: 0;
+    }
+  }
+}
+
+.theme-toggle {
+  position: fixed;
+  top: 10px;
+  right: 20px;
+  border-radius: 40%;
+  font-size: 0.8rem;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+
+  & i {
+    transition: color 0.3s;
+  }
+
+  body.dark & {
+    background-color: #ffffff; 
+    color: $text-color-dark;  
+  }
+
+  body.light & {
+    background-color: #fff;  
+    color: $text-color-dark;  
+  }
+  
+}
+.scroll-to-top {
+  position: fixed;
+  bottom: $button-position;
+  right: $button-position;
+  background-color: $button-bg;
+  color: white;
+  border: none;
+  border-radius: $button-border-radius;
+  font-size: $button-size;
+  padding: $button-padding;
+  cursor: pointer;
+  box-shadow: $button-shadow;
+  display: none;  
+  transition: background-color 0.3s, transform 0.3s;
+
+  &.show {
+    display: block;  
+  }
+
+  &:hover {
+    background-color: $button-hover-bg;  
+  }
+ 
+}
